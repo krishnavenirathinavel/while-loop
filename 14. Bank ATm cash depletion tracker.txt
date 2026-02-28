@@ -1,0 +1,23 @@
+ 
+#include <stdio.h>
+int main()
+{
+  int i = 0,n,amount = 0,withdrwal = 0;
+  int successwithdrawl = 0;
+  scanf("%d",&amount);
+  scanf("%d",&n);
+  while( i < n){
+    scanf("%d",&withdrwal);
+     amount = amount - withdrwal;
+    if(amount >= withdrwal){
+      successwithdrawl++; }
+    else{
+      break; }
+  
+  i++;
+}
+printf("Successful Withdrawals:%d\n",successwithdrawl);
+printf("Remaining Cash:%d\n",amount);
+
+    return 0;
+}

@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+  int i = 0,n,current = 0,value;
+  int max= 0;
+  scanf("%d",&n);
+  while ( i < n){
+    scanf("%d",&value);
+    if(value == 0){
+      current ++;
+      if(current > max)
+      max =  current;
+    }
+    
+    else {
+    current = 0;}
+    i ++;
+  }
+  printf("Longest Default Streak: %d",max);
+  
+    return 0;
+}
+ 

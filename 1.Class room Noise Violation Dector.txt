@@ -1,0 +1,29 @@
+ #include <stdio.h>
+ int main() {
+    int N;
+    scanf("%d", &N);
+    int i = 0;
+    int noise;
+    int violationCount = 0;
+    int currentStreak = 0;
+    int maxStreak = 0;
+    while (i < N) {
+      scanf("%d", &noise);
+      if (noise > 70) {
+        violationCount++;
+        currentStreak++;
+        if (currentStreak > maxStreak) {
+          maxStreak = currentStreak;
+          }
+        } else {
+            currentStreak = 0;
+        }
+
+        i++;
+    }
+
+    printf("Noise Violations: %d\n", violationCount);
+    printf("Longest Violation Streak: %d", maxStreak);
+
+    return 0;
+}
